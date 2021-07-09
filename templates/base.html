@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhonPlast | {% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="header">
+        <a href="/">
+            <img class="header__brand" src="{{ url_for('static', filename='images/JhonPlast.svg') }}" alt="JhonPlast">
+        </a>
+        <nav class="header__navbar">
+            <a class="navbar__item" href="">Home</a>
+            <a class="navbar__item" href="">Productos</a>
+            <a class="navbar__item" href="">Contacto</a>
+        </nav>
+        <a class="button button--header" href="">Cotizar</a>
+    </header>
+    <main>
+        {% block container %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <img class="footer__brand" src="" alt="">
+        <div>
+            <p class="footer__copy">© JhonPlast 2021. JONPLAST EP SAS. Todos los derechos reservados.</p>
+            <a href="" class="footer__author">Make by Royer Guerrero</a>
+        </div>
+        <div class="social__media">
+            Social Media
+        </div>
+    </footer>
+</body>
+
+</html>
