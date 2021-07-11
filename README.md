@@ -6,7 +6,7 @@
 ## How run the project
 1. Create a virtual enviroment `python3 -m venv .env` and activate `source .env/bin/activate`
 2. Install flask and more dependences `pip3 install -r requirements.txt` 
-3. Expose the needed env variables
-    - `expose FLASK_APP=main`
-    - `expose FLASK_ENV=development`
+3. Export the needed env variables
+    - `export FLASK_APP=main`
+    - `export FLASK_ENV=development`
 4. Run `flask run`

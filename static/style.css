@@ -141,6 +141,36 @@ a:hover {
     border-bottom: var(--red) 3px solid;
 }
 
+.tabs__paragraph {
+    color: var(--gray);
+    letter-spacing: -0.015em;
+    font-size: 16px;
+    line-height: 121%;
+}
+
+.tabs__paragraph > a {
+    font-size: 16px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 40% auto;
+    gap: 50px;
+    width: 75%;
+    margin: auto;
+}
+
+.contact__heading {
+    font-size: 38px;
+    margin: 25px 0;
+}
+
+.contact__map > iframe {
+    border-radius: 25px;
+    width: 100%;
+    height: 78vh;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -148,6 +178,7 @@ a:hover {
     text-align: center;
     padding: 50px 0;
     border-top: var(--ligth-gray) 1px solid;
+    margin-top: 100px;
 }
 
 .footer__copy {
@@ -163,6 +194,8 @@ a:hover {
     border: var(--red) 2px solid;
     white-space: nowrap;
     width: fit-content;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
 }
 
 .button:hover {
@@ -170,6 +203,64 @@ a:hover {
     background: transparent;
 }
 
+.button--large {
+    padding: 10px 50px;
+}
+
+.button--float-whatsapp {
+    border-radius: 50%;
+    position: fixed;
+    bottom:  0;
+    right: 0;
+    z-index: 1;
+    padding: 18px 21px;
+    margin: 30px;
+}
+
+.button--float-whatsapp:hover {
+    background: var(--red);
+    padding: 14px 17px;
+    margin: 40px;
+}
+
 .hidden {
     display: none !important;
+}
+
+.form__item {
+    margin-bottom: 16px;
+}
+
+.form__input, .form__textarea {
+    color: var(--gray);
+    outline: none;
+    border: none;
+    padding: 15px 32px;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    background: #F2F2F2;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.card__section {
+    margin-bottom: 10px;
+}
+
+.card__heading {
+    font-weight: bold;
+    color: var(--red);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.list {
+    margin: 0 25px;
+    color: var(--gray);
 }

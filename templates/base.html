@@ -27,9 +27,10 @@
     </header>
     <main>
         {% block container %}{% endblock %}
+        <a class="button button--float-whatsapp"><img src="{{ url_for('static', filename='icons/Whatsapp.svg') }}" alt=""></a>
     </main>
     <footer class="footer">
-        <img class="footer__brand" src="" alt="">
+        <img class="footer__brand" src="{{ url_for('static', filename='images/JhonPlast.svg') }}" alt="">
         <div>
             <p class="footer__copy">© JhonPlast 2021. JONPLAST EP SAS. Todos los derechos reservados.</p>
             <a href="" class="footer__author">Make by Royer Guerrero</a>
@@ -38,6 +39,7 @@
             Social Media
         </div>
     </footer>
+    <script src="{{ url_for('static', filename='javascript/menu.js') }}"></script>
 </body>
 
 </html>

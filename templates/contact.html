@@ -5,20 +5,47 @@
 
 
 {% block container %}
-    <section class="contact">
-        <div class="contact__content">
-            <form method="POST">
-                <label for=""> Name
-                    <input type="text">
+<section class="contact">
+    <div class="contact__content">
+        <h1 class="contact__heading">Contactanos</h1>
+        <form class="form" method="POST">
+            <div class="form__item">
+                <label class="form__label" for="name">
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
                 </label>
-            </form>
-            <div>
-
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="phone_number">
+                    <input class="form__input" type="text" id="phone_number" name="phone_number" placeholder="Numero de telefono" required>
+                </label>
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="message">
+                    <textarea class="form__textarea" name="message" rows="13" id="message" required placeholder="Cuentanos tú idea, proyecto, duda o sugerencia"></textarea>
+                </label>
+            </div>
+            <button class="button button--large" type="submit">Enviar mensaje</button>
+        </form>
+        <br><br>
+        <div class="card">
+            <div class="card__section">
+                <p class="card__heading">Direcciones:</p>
+                <ul class="list">
+                    <li class="list__item">Ak. 86 ## 72A - 08, Engativá, Bogotá</li>
+                    <li class="list__item">Cra. 104 #132-35 a 132-1, Bogotá, Colombia</li>
+                </ul>
+            </div>
+            <div class="card__section">
+                <p class="card__heading">Números telefonicos:</p>
+                <ul class="list">
+                    <li class="list__item">312 3316726</li>
+                </ul>
             </div>
         </div>
-        <div class="contact__map">
-
-        </div>
-    </section>
+    </div>
+    <div class="contact__map">
+        <iframe src="https://maps.google.com/maps?q=jhonplast&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+</section>
 {% endblock %}
-    

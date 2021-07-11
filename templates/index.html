@@ -9,10 +9,11 @@
     <div class="hero__container">
         <h1 class="hero__heading">Estibas, Canastillas<br> y Canecas</h1>
         <br><br>
-        <a href="" class="button">Ver catalogo</a>
+        <a href="/productos/" class="button">Ver catalogo</a>
     </div>
     <div class="hero__products">
-        <img class="hero__main-product" src="{{ url_for('static', filename='images/estibas.png') }}" alt="Estibas de jhonplast">
+        <img class="hero__main-product" src="{{ url_for('static', filename='images/estibas.png') }}"
+            alt="Estibas de jhonplast">
         <div class="tabs">
             <div class="tabs__controls">
                 <p class="tabs__item tabs__item--active" data-id="0">Estibas</p>
@@ -21,10 +22,14 @@
             </div>
             <div class="tabs__content">
                 <p class="tabs__paragraph" data-id="0">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt cum aliquam expedita, dolor
-                    ad quo mollitia fugiat explicabo molestias nam eveniet numquam commodi quod repudiandae nostrum?
-                    Quisquam, blanditiis optio?
-                    <a href="">Ver todas las estibas</a>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus vel ut necessitatibus veniam
+                    doloribus reiciendis fugit ducimus, iusto expedita dolore enim, esse dolorem perferendis molestiae.
+                    Nesciunt quo non quaerat, debitis suscipit neque delectus iure quae eos, ab magnam nemo quidem eum
+                    minus numquam rem eius nihil laborum perspiciatis. Laborum aut minus voluptatibus cumque cum dolores
+                    officia recusandae nam minima aspernatur dolore nisi, itaque ipsam at quasi, dolorem odit a
+                    consectetur amet nobis eum quam dolorum beatae pariatur! Cupiditate, sunt iusto.
+                    <br><br>
+                    <a href="/productos/?category=estibas">Ver todas las estibas</a>
                 </p>
                 <!-- <p class="tabs__paragraph" data-id="1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt cum aliquam expedita, dolor
@@ -42,7 +47,4 @@
         </div>
     </div>
 </section>
-<a class="button button--float">
-    Whatsapp
-</a>
 {% endblock %}
