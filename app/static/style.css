@@ -310,4 +310,5 @@ a:hover {
 
 .products__search > button > img {
     width: 20px;
+    cursor: pointer;
 }

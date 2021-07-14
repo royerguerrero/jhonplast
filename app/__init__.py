@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, render_template, request
 
-from app.extensions import mongo
+from app.extensions import mongo, mail
 from app.api import api
 
 
@@ -11,6 +11,7 @@ def create_app(config_object='app.settings'):
     app.config.from_object(config_object)
 
     mongo.init_app(app)
+    mail.init_app(app)
 
     app.register_blueprint(api)
 
