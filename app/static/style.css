@@ -264,3 +264,50 @@ a:hover {
     margin: 0 25px;
     color: var(--gray);
 }
+
+.products__header {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.products__heading {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    margin-bottom: 40px;
+}
+
+.products__search {
+    color: var(--gray);
+    background: #F2F2F2;
+    padding: 15px 40px;
+    border-radius: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.products__search > input {
+    width: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.products__search > input, button {
+    border: none;
+    background: transparent;
+    color: var(--gray);
+    text-align: center;
+    outline: none;
+}
+
+.products__search > button > img {
+    width: 20px;
+}

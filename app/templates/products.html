@@ -8,7 +8,9 @@
             <h2 class="products__heading">Conoce nuestros productos</h2>
             <div class="products__search">
                 <input id="search" type="search" placeholder="Ingresa el termino de busqueda">
-                <button type="submit"><img src="" alt=""></button>
+                <button type="submit">
+                    <img src="{{ url_for('static', filename='icons/search.svg') }}" alt="search">
+                </button>
             </div>
         </div>
     </section>
