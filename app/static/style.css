@@ -168,7 +168,7 @@ a:hover {
 .contact__map > iframe {
     border-radius: 25px;
     width: 100%;
-    height: 78vh;
+    height: 100%;
 }
 
 .footer {
@@ -311,4 +311,24 @@ a:hover {
 .products__search > button > img {
     width: 20px;
     cursor: pointer;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media__item {
+    background: var(--red);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media__item > img {
+    width: 21px;
+    height: 21px;
 }

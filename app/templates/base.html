@@ -33,10 +33,18 @@
         <img class="footer__brand" src="{{ url_for('static', filename='images/JhonPlast.svg') }}" alt="">
         <div>
             <p class="footer__copy">© JhonPlast 2021. JONPLAST EP SAS. Todos los derechos reservados.</p>
-            <a href="" class="footer__author">Make by Royer Guerrero</a>
+            <a href="https://royerguerrero.vercel.app/" class="footer__author">Constuido por Royer Guerrero</a>
         </div>
-        <div class="social__media">
-            Social Media
+        <div class="social-media">
+            <a href="" class="social-media__item">
+                <img src="{{ url_for('static', filename='icons/facebook.svg') }}" alt="Facebook">
+            </a>
+            <a href="" class="social-media__item">
+                <img src="{{ url_for('static', filename='icons/instagram.svg') }}" alt="Instagram">
+            </a>
+            <a href="" class="social-media__item">
+                <img src="{{ url_for('static', filename='icons/Whatsapp.svg') }}" alt="Whatsapp">
+            </a>
         </div>
     </footer>
     <script src="{{ url_for('static', filename='javascript/menu.js') }}"></script>

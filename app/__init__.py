@@ -1,8 +1,9 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask
 
 from app.extensions import mongo, mail
+from app.website import website
 from app.api import api
 
 
@@ -14,17 +15,6 @@ def create_app(config_object='app.settings'):
     mail.init_app(app)
 
     app.register_blueprint(api)
-
-    @app.route('/')
-    def index():
-        return render_template('index.html')
-
-    @app.route('/contacto/')
-    def contact():
-        return render_template('contact.html')
-
-    @app.route('/productos/')
-    def products():
-        return render_template('products.html')
+    app.register_blueprint(website)
 
     return app
