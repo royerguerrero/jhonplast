@@ -8,6 +8,22 @@
 <section class="contact">
     <div class="contact__content">
         <h1 class="contact__heading">Contactanos</h1>
+        {% if error %}
+            <div class="message message--error">
+                <p class="message__content">{{ error }}</p>
+            </div>
+        {% endif %}
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="message">
+                        <p class="message__content">{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+            
         <form class="form" method="POST">
             <div class="form__item">
                 <label class="form__label" for="name">

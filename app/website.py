@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash
 from flask_mail import Message
 from app.extensions import mail
 
@@ -12,11 +12,23 @@ def index():
 
 @website.route('/contacto/', methods=['GET', 'POST'])
 def contact():
+    error = None
     if request.method == 'POST':
-        msg = Message('Hello', recipients=['ventas@jhonplast.com'])
-        mail.send(msg)
+        if request.form['name'] == '':
+            error = 'Asegurese de ingresar su nombre'
+        elif request.form['phone_number'] == '':
+            error = 'Asegurese de añadir su numero de telefono'
+            # TODO: add regex validation for the number phone
+        elif request.form['message'] == '':
+            error = 'Asegurese de incluir el mensaje'
+        else:
+            # msg = Message('Hello', recipients=['ventas@jhonplast.com'])
+            # mail.send(msg)
+            phone_number = request.form['phone_number']
+            flash(f'Su mensaje fue enviado satisfactoriamente, pronto resivira respuesta a su numero {phone_number}')
 
-    return render_template('contact.html')
+
+    return render_template('contact.html', error=error)
 
 
 @website.route('/productos/')
