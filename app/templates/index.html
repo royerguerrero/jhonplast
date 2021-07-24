@@ -21,30 +21,34 @@
                 <p class="tabs__item" data-id="2">Canastillas</p>
             </div>
             <div class="tabs__content">
-                <p class="tabs__paragraph" data-id="0">
+                <p class="tabs__paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus vel ut necessitatibus veniam
                     doloribus reiciendis fugit ducimus, iusto expedita dolore enim, esse dolorem perferendis molestiae.
                     Nesciunt quo non quaerat, debitis suscipit neque delectus iure quae eos, ab magnam nemo quidem eum
                     minus numquam rem eius nihil laborum perspiciatis. Laborum aut minus voluptatibus cumque cum dolores
                     officia recusandae nam minima aspernatur dolore nisi, itaque ipsam at quasi, dolorem odit a
                     consectetur amet nobis eum quam dolorum beatae pariatur! Cupiditate, sunt iusto.
-                    <br><br>
                     <a href="/productos/?category=estibas">Ver todas las estibas</a>
                 </p>
-                <!-- <p class="tabs__paragraph" data-id="1">
+                <p class="tabs__paragraph">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt cum aliquam expedita, dolor
                     ad quo mollitia fugiat explicabo molestias nam eveniet numquam commodi quod repudiandae nostrum?
                     Quisquam, blanditiis optio?
-                    <a href="">Ver todas las canecas</a>
+                    <a href="/productos/?category=canecas">Ver todas las canecas</a>
                 </p>
-                <p class="tabs__paragraph" data-id="2">
+                <p class="tabs__paragraph">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt cum aliquam expedita, dolor
                     ad quo mollitia fugiat explicabo molestias nam eveniet numquam commodi quod repudiandae nostrum?
                     Quisquam, blanditiis optio?
-                    <a href="">Ver todas las canastillas</a>
-                </p> -->
+                    <a href="/productos/?category=canastillas">Ver todas las canastillas</a>
+                </p>
             </div>
         </div>
     </div>
 </section>
 {% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='javascript/tabs.js') }}"></script>
+{% endblock %}
+    

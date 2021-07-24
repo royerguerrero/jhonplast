@@ -4,7 +4,6 @@ from flask import Flask
 
 from app.extensions import mongo, mail
 from app.website import website
-from app.api import api
 
 
 def create_app(config_object='app.settings'):
@@ -14,7 +13,6 @@ def create_app(config_object='app.settings'):
     mongo.init_app(app)
     mail.init_app(app)
 
-    app.register_blueprint(api)
     app.register_blueprint(website)
 
     return app

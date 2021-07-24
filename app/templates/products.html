@@ -13,5 +13,42 @@
                 </button>
             </div>
         </div>
+        <div class="products__pills">
+            <a href="/productos/?category=estibas" class="pill">Estibas</a>
+            <a href="/productos/?category=canastillas" class="pill">Canastillas</a>
+            <a href="/productos/?category=canecas" class="pill">Canecas</a>
+        </div>
+        <div class="products__collection">
+            {% for product in products %}
+                <div class="card card--product">
+                    <div class="card__image">
+                        <img src="{{ product.image }}" alt="{{ product.name }}">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="card__title">{{ product.name }}</h2>
+                        <span class="card__subtitle">Ref #{{ product.ref }}</span>
+                        <div class="card__details">
+                            <div>
+                                <p class="card__heading">Dimensiones</p>
+                                <p>{{ product.dimentions.length }}cm, {{ product.dimentions.width }}cm, {{ product.dimentions.heigth }}cm</p>
+                                <small>(Largo, Ancho, Alto)</small>
+                            </div>
+                            <div>
+                                <p class="card__heading">Precio</p>
+                                <p>$ {{ product.price }}</p>
+                                <small>Pesos Colombianos</small>
+                            </div>
+                            <a href="" class="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+                
+            
+        </div>
     </section>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='javascript/products.js') }}"></script>
 {% endblock %}
