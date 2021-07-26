@@ -94,7 +94,8 @@ a:hover {
 .hero__heading {
     font-size: 72px;
     line-height: 85.69%;
-    color: var(--light)
+    letter-spacing: -4.0px;
+    color: var(--light);
 }
 
 .hero__container {
@@ -429,6 +430,13 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+}
+
+.products__empty {
+    text-align: center;
+    grid-column: 2 / 3;
+    color: var(--gray);
+    font-size: 18px;
 }
 
 .card__content {

@@ -33,9 +33,14 @@ def contact():
 
 @website.route('/productos/')
 def products():
+    products = []
+
     category = request.args.get('category', None)
+    search = request.args.get('s', None)
     if category is not None:
         products = mongo.db.products.find({'category': category})
-        return render_template('products.html', products=products)
 
-    return render_template('products.html')
+    if search is not None:
+        products = mongo.db.products.find({'name': {'$regex': search, '$options': 'i'}})
+
+    return render_template('products.html', products=products)
