@@ -86,9 +86,10 @@ a:hover {
     margin: auto;
     border-radius: 25px;
     background: url('./images/bg.jpg');
-    background-position: center;
+    background-position: center;    
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 250px;
 }
 
 .hero__heading {
@@ -113,7 +114,7 @@ a:hover {
     border-radius: 25px;
     padding: 25px;
     gap: 15px;
-    height: 300px;
+    height: fit-content;
 }
 
 .hero__main-product {
@@ -443,13 +444,14 @@ a:hover {
     padding: 16px 30px;
 }
 
-.card__title {
+.card__title {  
     font-family: 'Work Sans', sans-serif;
     color: var(--dark);
     font-weight: 600;
     font-size: 30px;
     line-height: 85.69%;
     letter-spacing: -0.05em;
+    text-transform: capitalize;
 }
 
 .card__subtitle {
@@ -512,4 +514,53 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.navbar__toogle-button {
+    display: none;
+}
+
+/* iPads and Tablets */
+@media screen and (max-width: 768px) {
+    body {
+        border: red solid 5px;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    body {
+        border: blue solid 5px;
+    }
+
+    .button--header {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 93vw;
+        text-align: center;
+        margin: 15px 10px;
+        z-index: 1; 
+    }
+
+    .button--float-whatsapp {
+        display: none;
+    }
+
+    .navbar__toogle-button {
+        display: initial;
+    }
+
+    .navbar__item {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+        padding: 30px 15px;
+    }
+
+    .header__brand {
+        width: 120px;
+    }
 }
