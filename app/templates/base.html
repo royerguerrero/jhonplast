@@ -28,7 +28,9 @@
     </header>
     <main>
         {% block container %}{% endblock %}
-        <a class="button button--float-whatsapp"><img src="{{ url_for('static', filename='icons/Whatsapp.svg') }}" alt=""></a>
+        <a class="button button--float-whatsapp" href="https://api.whatsapp.com/send?phone=573214896631&text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20">
+            <img src="{{ url_for('static', filename='icons/Whatsapp.svg') }}" alt="Cotizar por whatsapp">
+        </a>
     </main>
     <footer class="footer">
         <img class="footer__brand" src="{{ url_for('static', filename='images/JhonPlast.svg') }}">

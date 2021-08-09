@@ -31,17 +31,17 @@
                         <div class="card__details">
                             <div>
                                 {% if product.dimentions %}
-                                <p class="card__heading">Dimensiones</p>
-                                <p>{{ product.dimentions.length }}cm, {{ product.dimentions.width }}cm, {{ product.dimentions.heigth }}cm</p>
-                                <small>(Largo, Ancho, Alto)</small>
+                                    <p class="card__heading">Dimensiones</p>
+                                    <p>{{ product.dimentions.length }}cm, {{ product.dimentions.width }}cm, {{ product.dimentions.heigth }}cm</p>
+                                    <small>(Largo, Ancho, Alto)</small>
                                 {% else %}
-                                <p class="card__heading">Capacidad</p>
-                                <p>{{ product.capacity }} Litros</p>
+                                    <p class="card__heading">Capacidad</p>
+                                    <p>{{ product.capacity }} Litros</p>
                                 {% endif %}
                             </div>
                             <div>
                                 <p class="card__heading">Precio</p>
-                                <p>$ {{ product.price }} C/U</p>
+                                <p>{{ product.price }} C/U</p>
                                 <small>Pesos Colombianos</small>
                             </div>
                             <a href="" class="button">Comprar</a>

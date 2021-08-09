@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 
 from app.extensions import mongo, mail
