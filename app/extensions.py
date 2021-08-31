@@ -1,5 +1,6 @@
 from flask_mail import Mail
 from flask_pymongo import PyMongo
+from flask_sqlalchemy import SQLAlchemy
 
-mongo = PyMongo()
+db = SQLAlchemy()
 mail = Mail()

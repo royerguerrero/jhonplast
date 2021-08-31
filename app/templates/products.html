@@ -7,7 +7,7 @@
         <div class="products__header">
             <h2 class="products__heading">Conoce nuestros productos</h2>
             <form class="products__search" method="GET">
-                    <input id="search" type="search" name="s" placeholder="Ingresa el termino de busqueda" name="s">
+                    <input id="search" type="search" name="s" placeholder="Ingresa el termino de busqueda" name="s" autocomplete="off">
                     <button type="submit">
                         <img src="{{ url_for('static', filename='icons/search.svg') }}" alt="search">
                     </button>

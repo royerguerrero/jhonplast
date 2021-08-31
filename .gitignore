@@ -448,5 +448,5 @@ modules.xml
 # Sonarlint plugin
 .idea/sonarlint
 
-
-# End of https://www.toptal.com/developers/gitignore/api/flask,python,pycharm,visualstudiocode,vim
+# products.csv
+products.csv

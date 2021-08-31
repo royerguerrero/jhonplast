@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, flash
 from flask_mail import Message
-from app.extensions import mail, mongo
+from app.extensions import mail
+from app.models import Product
 
 website = Blueprint('website', __name__)
 
@@ -27,7 +28,6 @@ def contact():
             phone_number = request.form['phone_number']
             flash(f'Su mensaje fue enviado satisfactoriamente, pronto resivira respuesta a su numero {phone_number}')
 
-
     return render_template('contact.html', error=error)
 
 
@@ -38,9 +38,9 @@ def products():
     category = request.args.get('category', None)
     search = request.args.get('s', None)
     if category is not None:
-        products = mongo.db.products.find({'category': category})
+        products = Product.query.filter_by(category=category)
 
     if search is not None:
-        products = mongo.db.products.find({'name': {'$regex': search, '$options': 'i'}})
+        products = Product.query.filter(Product.name.ilike(f'%{search}%'))
 
     return render_template('products.html', products=products)
