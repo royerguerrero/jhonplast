@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JhonPlast | {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.png') }}" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Work+Sans:wght@400;500;600;700&display=swap"
@@ -24,7 +25,7 @@
             <a class="navbar__item" href="/contacto/">Contacto</a>
             <button class="navbar__toogle-button">🍔</button>
         </nav>
-        <a class="button button--header" href="">Cotizar</a>
+        <a class="button button--header" href="https://api.whatsapp.com/send?phone=573123316726&text=Vengo%20desde%20su%20pagina%20web,%20quiero%20cotizar%20un%20proyecto">Cotizar</a>
     </header>
     <main>
         {% block container %}{% endblock %}
@@ -45,7 +46,7 @@
             <a href="https://www.instagram.com/jonplast/?r=nametag" class="social-media__item" target="blank">
                 <img src="{{ url_for('static', filename='icons/instagram.svg') }}" alt="Instagram">
             </a>
-            <a href="" class="social-media__item">
+            <a href="https://api.whatsapp.com/send?phone=573123316726&text=Hola!,%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20la%20empresa" class="social-media__item">
                 <img src="{{ url_for('static', filename='icons/Whatsapp.svg') }}" alt="Whatsapp">
             </a>
         </div>

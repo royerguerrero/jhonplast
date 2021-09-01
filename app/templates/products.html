@@ -27,7 +27,7 @@
                     </div>
                     <div class="card__content">
                         <h2 class="card__title">{{ product.name }}</h2>
-                        <span class="card__subtitle">Ref #{{ product.ref }}</span>
+                        <span class="card__subtitle">Ref #{{ product.id }}</span>
                         <div class="card__details">
                             <div>
                                 {% if product.dimentions %}
@@ -44,7 +44,7 @@
                                 <p>{{ product.price }} C/U</p>
                                 <small>Pesos Colombianos</small>
                             </div>
-                            <a href="" class="button">Comprar</a>
+                            <a href="https://api.whatsapp.com/send?phone=573123316726&text=Necesito%20comprar%20{{ product.category }}%20del%20tipo%20{{ product.name }}" class="button">Comprar</a>
                         </div>
                     </div>
                 </div>
