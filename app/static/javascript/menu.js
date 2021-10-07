@@ -1,4 +1,5 @@
-const menuItems = document.querySelectorAll('.navbar__item')
+const header = document.querySelector(".header")
+const menuItems = header.querySelectorAll('.navbar__item')
 
 menuItems.forEach(item => {
     if (item.href == window.location) {
@@ -7,6 +8,17 @@ menuItems.forEach(item => {
 })
 
 const burgerButton = document.querySelector('.navbar__toogle-button')
+let isMenuOpen = false
+
 burgerButton.addEventListener('click', () => {
-    // TODO: Add logic for show or not the navbar
+    burgerButton.classList.toggle("navbar__toogle-button--close")
+
+    if (isMenuOpen) {
+        isMenuOpen = false
+    } else {
+        isMenuOpen = true
+        menuItems.forEach(i => {i.classList.add('hide')})
+    }
+
+   menuItems.forEach(item => item.classList.toggle("show"))
 })
